@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="output.css">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-primary w-full">
+
+  <section class="w-1/2 m-auto bg-white p-3 my-20">
+    <form class="m-auto w-5/6" action="">
+      <h1 class="text-3xl text-tertiary font-title my-3">Contact Us</h1>
+      <fieldset class=" w-auto flex justify-between gap-3 my-4">
+        <div class="w-full">
+          <label class="block font-text text-quaternary-light my-2" for="">First Name*</label>
+          <input class="w-full rounded-md border border-quaternary-light h-10" type="text">
+        </div>
+        <div class="w-full">
+          <label class="block font-text text-quaternary-light my-2" for="">last Name*</label>
+          <input class="w-full rounded-md border border-quaternary-light h-10" type="text">
+        </div>
+      </fieldset>
+      <fieldset class=" w-auto flex justify-between gap-3 my-4">
+        <div class="w-full">
+          <label class="block font-text text-quaternary-light my-2" for="">Email Address*</label>
+          <input class="w-full rounded-md border border-quaternary-light h-10" type="text">
+        </div>
+      </fieldset>
+      <fieldset class=" w-auto j my-4">
+        <label class="block font-text text-quaternary-light my-2" for="">Query types*</label>
+        <div class="flex gap-3">
+          <div class="w-full flex gap-3 items-center rounded-md border border-quaternary-light h-10">
+            <input id="radio-1" class=" ml-3 inline-block border border-quaternary-light h-6" type="radio" name="enquiry">
+            <label for="radio-1" class="text-right">General enquiry</label>
+          </div>
+          <div class="w-full flex gap-3 items-center rounded-md border border-quaternary-light h-10">
+            <input id="radio-2" class=" ml-3 inline-block border border-quaternary-light h-6" type="radio" name="enquiry">
+            <label class="text-right" for="radio-2">Support Request</label>
+          </div>
+        </div>
+        
+      </fieldset>
+      <fieldset>
+        <label class="block font-text text-quaternary-light my-2" for="">Message*</label>
+        <textarea class="w-full rounded-md border border-quaternary-light h-32" name="" id="" cols="30" rows="10"></textarea>
+      </fieldset>
+    <div class="my-10">
+      <input class="" type="checkbox">
+      <label class=" font-text text-quaternary-light" for=""> i consent to being contacted by the team*</label>
+    </div>
+    <div class=" w-full">
+      <button class="bg-secondary text-white font-text-md w-full text-lg h-14 rounded-md" type="submit"> Submit</button>
+    </div>
+    </form>
+  </section>
+
+  <!-- Contact Us
+
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
