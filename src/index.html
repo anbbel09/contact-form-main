@@ -6,7 +6,6 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="output.css">
-  
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,48 +17,55 @@
 <body class="bg-primary w-full">
 
   <section class="w-1/2 m-auto bg-white p-3 my-20">
-    <form class="m-auto w-5/6" action="">
+    <form id="form" class="m-auto w-5/6" action="" novalidate>
       <h1 class="text-3xl text-tertiary font-title my-3">Contact Us</h1>
       <fieldset class=" w-auto flex justify-between gap-3 my-4">
-        <div class="w-full">
-          <label class="block font-text text-quaternary-light my-2" for="">First Name*</label>
-          <input class="w-full rounded-md border border-quaternary-light h-10" type="text">
+        <div class="w-full username">
+          <label class="block font-text text-quaternary-light my-2" for="username">First Name*</label>
+          <input id="username" class="w-full rounded-md border border-quaternary-light h-10 p-2 outline-secondary-light " placeholder="John" name="username" required type="text">
+          <p class="font-text text-red-600 my-3 text-sm invisible textoError">This field es required</p>
         </div>
-        <div class="w-full">
-          <label class="block font-text text-quaternary-light my-2" for="">last Name*</label>
-          <input class="w-full rounded-md border border-quaternary-light h-10" type="text">
+        <div class="w-full lastname">
+          <label class="block font-text text-quaternary-light my-2" for="last_name">last Name*</label>
+          <input id="last_name" class="w-full rounded-md border border-quaternary-light h-10 p-2 outline-secondary-light "placeholder="Doe" name="lastname" required type="text">
+          <p class="font-text text-red-600 my-3 text-sm invisible textoError">This field es required</p>   
         </div>
       </fieldset>
       <fieldset class=" w-auto flex justify-between gap-3 my-4">
-        <div class="w-full">
-          <label class="block font-text text-quaternary-light my-2" for="">Email Address*</label>
-          <input class="w-full rounded-md border border-quaternary-light h-10" type="text">
+        <div class="w-full email">
+          <label class="block font-text text-quaternary-light my-2" for="email">Email Address*</label>
+          <input id="email" class="w-full rounded-md border border-quaternary-light h-10 p-2 outline-secondary-light " placeholder="example@gmail.com"  name="email" required  type="email">
+          <p class="font-text text-red-600 my-3 text-sm invisible textoError">Please enter a valid email address</p>
         </div>
       </fieldset>
-      <fieldset class=" w-auto j my-4">
+      <fieldset class=" w-auto j my-4 enquiry">
         <label class="block font-text text-quaternary-light my-2" for="">Query types*</label>
-        <div class="flex gap-3">
+        <div id="queryType" class="flex gap-3">
           <div class="w-full flex gap-3 items-center rounded-md border border-quaternary-light h-10">
-            <input id="radio-1" class=" ml-3 inline-block border border-quaternary-light h-6" type="radio" name="enquiry">
-            <label for="radio-1" class="text-right">General enquiry</label>
+            <input  id="radio-1" class=" ml-3 inline-block border border-quaternary-light h-6 p-2 outline-secondary-light " required  type="radio" name="enquiry" value="General enquiry">
+            <label for="radio-1" class="text-right font-text">General enquiry</label>
           </div>
           <div class="w-full flex gap-3 items-center rounded-md border border-quaternary-light h-10">
-            <input id="radio-2" class=" ml-3 inline-block border border-quaternary-light h-6" type="radio" name="enquiry">
-            <label class="text-right" for="radio-2">Support Request</label>
+            <input id="radio-2" class=" ml-3 inline-block border border-quaternary-light h-6 p-2 " required  type="radio" name="enquiry" value="Support Request">
+            <label class="text-right font-text" for="radio-2">Support Request</label>
           </div>
         </div>
+        <p class="font-text text-red-600 my-3 text-sm invisible textoError">Please select a query type</p>
         
       </fieldset>
       <fieldset>
         <label class="block font-text text-quaternary-light my-2" for="">Message*</label>
-        <textarea class="w-full rounded-md border border-quaternary-light h-32" name="" id="" cols="30" rows="10"></textarea>
+        <textarea id="message" class="w-full rounded-md border border-quaternary-light h-32 font-text p-2 textArea" name="message" cols="30" rows="10" maxlength="100" placeholder="Escribe tu mensaje" required></textarea>
+        <p class="font-text text-red-600 my-3 text-sm invisible textoError">This field es required</p>
       </fieldset>
-    <div class="my-10">
-      <input class="" type="checkbox">
-      <label class=" font-text text-quaternary-light" for=""> i consent to being contacted by the team*</label>
+    <div class="my-4">
+      <input id="terms" type="checkbox" name="terms and conditions" required>
+      <label class=" font-text text-quaternary-light" for="terms"> i consent to being contacted by the team*</label>
+      <p class="font-text text-red-600 my-3 text-sm invisible textoError">To submit this form, please consent to being contacted</p>
     </div>
-    <div class=" w-full">
-      <button class="bg-secondary text-white font-text-md w-full text-lg h-14 rounded-md" type="submit"> Submit</button>
+    <div class=" w-full my-6">
+      <button class="bg-secondary text-white font-text-md w-full text-lg h-14 rounded-md"> Submit</button>
+      
     </div>
     </form>
   </section>
@@ -96,5 +102,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script defer src="/src/index.js"></script>
 </body>
 </html>
