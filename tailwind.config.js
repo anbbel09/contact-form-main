@@ -10,6 +10,7 @@ module.exports = {
         'tertiary': '#2E4342',
         'quaternary': '#AEB4B2',
         'quaternary-light': '#6E7877',
+        'quaternary-dark': '#063F36',
       },
       fontFamily: {
         'title': ['Sofia-bold'],

@@ -6,28 +6,28 @@ const radioButtons = document.querySelectorAll('input[name="enquiry"]');
 
 const expresiones = {
   name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-  last_name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-  email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  lastname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
 };
 
 const campos = {
   username: false,
   lastname: false,
-  email: false,
+  email: false
 };
 
 const validarForm = (e) => {
   switch (e.target.name) {
     case "username":
-      validarCampo(expresiones.name, e.target, ".username");
+      validarCampo(expresiones.name, e.target, "username");
 
       break;
     case "lastname":
-      validarCampo(expresiones.name, e.target, ".lastname");
+      validarCampo(expresiones.lastname, e.target, "lastname");
 
       break;
     case "email":
-      validarCampo(expresiones.name, e.target, ".email");
+      validarCampo(expresiones.email, e.target, "email");
 
       break;
 
@@ -38,16 +38,18 @@ const validarForm = (e) => {
 
 const validarCampo = (expresion, input, campo) => {
   if (expresion.test(input.value)) {
-    let container = document.querySelector(`${campo}`);
+    let container = document.querySelector(`.${campo}`);
     let textErr = container.querySelector(".textoError");
     textErr.style.visibility = "hidden";
     campos[campo]= true;
+    
   } else {
-    let container = document.querySelector(`${campo}`);
+    let container = document.querySelector(`.${campo}`);
     let textErr = container.querySelector(".textoError");
     textErr.style.visibility = "visible";
     campos[campo]= false;
   }
+  console.log(campos);
 };
 
 inputs.forEach((input) => {
@@ -92,14 +94,23 @@ form.addEventListener("submit", (e) => {
     }
   });
 
-  const terms= Document.getElementById('terms');
+  const terms = document.getElementById('terms');
 
-  if(campos.name  && campos.lastname && campos.email && terms.checked){
+  if(campos.email && campos.username && campos.lastname  && terms.checked ){
 
-    form.reset();
 
+    console.log('hola');
+    
+
+    let message = document.getElementById('popup');
+    console.log(message);
+    
+    message.style.display = "block";
+
+  } else {
+    console.log('chau');
+    
   }
-
 
 });
 

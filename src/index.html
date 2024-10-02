@@ -16,7 +16,15 @@
 </head>
 <body class="bg-primary w-full">
 
-  <section class="w-1/2 m-auto bg-white p-3 my-20">
+  
+  <section class="w-1/3 m-auto bg-white p-3 my-20">
+    <article class="m-auto w-1/2 my-9  bg-quaternary-dark text-white rounded-md px-3 py-4 hidden" id="popup">
+      <div class="m-auto flex gap-2 items-center">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/></svg>
+      <h4 class="font-text-md  inline-block">Message Send!</h4>
+    </div>
+    <p class="font-text text-sm inline-block text-quaternary">Thanks for completing the form. We'll be in touch soon!</p>
+    </article>
     <form id="form" class="m-auto w-5/6" action="" novalidate>
       <h1 class="text-3xl text-tertiary font-title my-3">Contact Us</h1>
       <fieldset class=" w-auto flex justify-between gap-3 my-4">
@@ -33,8 +41,8 @@
       </fieldset>
       <fieldset class=" w-auto flex justify-between gap-3 my-4">
         <div class="w-full email">
-          <label class="block font-text text-quaternary-light my-2" for="email">Email Address*</label>
-          <input id="email" class="w-full rounded-md border border-quaternary-light h-10 p-2 outline-secondary-light " placeholder="example@gmail.com"  name="email" required  type="email">
+          <label class="block font-text text-quaternary-light my-2" for="Email">Email Address*</label>
+          <input id="Email" class="w-full rounded-md border border-quaternary-light h-10 p-2 outline-secondary-light " placeholder="example@gmail.com"  name="email" required  type="email">
           <p class="font-text text-red-600 my-3 text-sm invisible textoError">Please enter a valid email address</p>
         </div>
       </fieldset>
@@ -70,37 +78,10 @@
     </form>
   </section>
 
-  <!-- Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Magali Gonzalez</a>.
   </div>
   <script defer src="/src/index.js"></script>
 </body>
